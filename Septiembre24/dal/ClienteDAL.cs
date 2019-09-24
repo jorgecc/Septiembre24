@@ -60,6 +60,24 @@ namespace Septiembre24.dal
 
         public static void Insertar(Cliente cliente)
         {
+            // 1) Conectarme a la base de datos
+            string cadena = "Data Source=PCJC;Initial Catalog=base2019;Persist Security Info=True;User ID=sa;Password=abc.123";
+
+            SqlConnection con = new SqlConnection(cadena);
+
+            con.Open();
+
+
+            // 2) Crear un comando
+            string sql = "insert into clientes(rut, nombre) values ('"+cliente.Rut+"','"+cliente.Nombre+"')";
+
+            SqlCommand com=new SqlCommand(sql,con);
+
+            com.ExecuteNonQuery();
+
+            // 3) cerrar la conexion
+
+            con.Close();
 
         }
     }
