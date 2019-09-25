@@ -65,13 +65,28 @@ namespace Septiembre24.dal
 
             SqlConnection con = new SqlConnection(cadena);
 
+            // OracleConnection
+            // MysqlConnection
+
             con.Open();
 
 
             // 2) Crear un comando
-            string sql = "insert into clientes(rut, nombre) values ('"+cliente.Rut+"','"+cliente.Nombre+"')";
+
+            // ES PELIGROSO:
+            // string sql = "insert into clientes(rut, nombre) values ('"+cliente.Rut+"','"+cliente.Nombre+"')";
+            string sql= "insert into clientes(rut, nombre) values (@rut,@nombre)";
+
 
             SqlCommand com=new SqlCommand(sql,con);
+
+
+
+            SqlParameter param1=new SqlParameter("@rut",cliente.Rut);
+            com.Parameters.Add(param1);
+
+            SqlParameter param2 = new SqlParameter("@nombre", cliente.Nombre);
+            com.Parameters.Add(param2);
 
             com.ExecuteNonQuery();
 

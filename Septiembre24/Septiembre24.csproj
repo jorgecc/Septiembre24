@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
+    <Content Include="WebInsertarCliente.aspx" />
+    <Content Include="WebListarCliente.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dal\ClienteDAL.cs" />
@@ -77,6 +79,21 @@
     </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="servicio\ClienteSrv.cs" />
+    <Compile Include="WebInsertarCliente.aspx.cs">
+      <DependentUpon>WebInsertarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebInsertarCliente.aspx.designer.cs">
+      <DependentUpon>WebInsertarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebListarCliente.aspx.cs">
+      <DependentUpon>WebListarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebListarCliente.aspx.designer.cs">
+      <DependentUpon>WebListarCliente.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

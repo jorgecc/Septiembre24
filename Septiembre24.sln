@@ -5,6 +5,11 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Septiembre24", "Septiembre24\Septiembre24.csproj", "{526180D9-22BC-4EA5-8CB7-519E7DABE15A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{9B2C9116-C04F-4CA4-8129-98371B1E0FAC}"
+	ProjectSection(SolutionItems) = preProject
+		Mantenedor Cliente.xmind = Mantenedor Cliente.xmind
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
